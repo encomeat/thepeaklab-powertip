@@ -7,7 +7,7 @@
  * A directive using https://github.com/stevenbenner/jquery-powertip for showing tooltips.
  * Supports placement of tooltips via `placement` Attribute.
  */
-angular.module('encome-monitor').directive('powertip', function powertip() {
+angular.module('tpl.powertip', []).directive('powertip', function powertip() {
   'use strict';
   return {
     template: '',
