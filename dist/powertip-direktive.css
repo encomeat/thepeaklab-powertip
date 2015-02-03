@@ -1,0 +1,52 @@
+#powerTip {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+.powertip {
+  background: rgba(0, 0, 0, 0.75);
+  border-bottom: 4px solid #0d3d8a;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14), 0 2px 9px rgba(0, 0, 0, 0.22);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+}
+.powertip:before {
+  border: 10px solid transparent;
+  box-shadow: none;
+  height: 14px !important;
+  margin-left: -10px;
+  position: absolute;
+  top: 112%;
+  width: 19px !important;
+}
+.powertip.n:before, .powertip.e:before, .powertip.s:before, .powertip.w:before, .powertip.ne:before, .powertip.nw:before, .powertip.se:before, .powertip.sw:before, .powertip.ne-alt:before {
+  content: '';
+  display: block;
+}
+.powertip.n:before, .powertip.ne:before, .powertip.nw:before, .powertip.ne-alt:before, .powertip.nw-alt:before {
+  border-top: 10px solid #0d3d8a;
+}
+.powertip.s:before, .powertip.se:before, .powertip.sw:before, .powertip.se-alt:before, .powertip.sw-alt:before {
+  border-bottom: 10px solid #0d3d8a;
+}
+.powertip.n:before, .powertip.s:before {
+  left: 50%;
+}
+.powertip.nw:before {
+  right: 5%;
+}
+.powertip.nw {
+  margin-left: 70px;
+}
+.powertip.ne:before {
+  left: auto;
+  right: 10px;
+}
+
+/*# sourceMappingURL=powertip-direktive.css.map */

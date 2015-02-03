@@ -1,0 +1,50 @@
+#powerTip {
+  display: none;
+  position: absolute;
+  white-space: nowrap;
+  z-index: 9999;
+}
+
+.powertip {
+  background: rgba(0, 0, 0, .75);
+  border-bottom: 4px solid #0d3d8a;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .14), 0 2px 9px rgba(0, 0, 0, .22);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 12px;
+  &:before {
+    border: 10px solid transparent;
+    box-shadow: none;
+    height: 14px !important;
+    margin-left: -10px;
+    position: absolute;
+    top: 112%;
+    width: 19px !important;
+  }
+  &.n:before, &.e:before, &.s:before, &.w:before, &.ne:before, &.nw:before, &.se:before, &.sw:before, &.ne-alt:before {
+    content: '';
+    display: block;
+  }
+  &.n:before, &.ne:before, &.nw:before, &.ne-alt:before, &.nw-alt:before {
+    border-top: 10px solid #0d3d8a;
+  }
+  &.s:before, &.se:before, &.sw:before, &.se-alt:before, &.sw-alt:before {
+    border-bottom: 10px solid #0d3d8a;
+  }
+  &.n:before, &.s:before {
+    left: 50%;
+  }
+  &.nw:before {
+    right: 5%;
+  }
+  &.nw {
+    margin-left: 70px;
+  }
+  &.ne:before {
+    left: auto;
+    right: 10px;
+  }
+}

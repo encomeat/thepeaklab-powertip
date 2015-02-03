@@ -1,0 +1,17 @@
+{
+  "name": "powertip-direktive",
+  "version": "0.1.0",
+  "main": [
+    "dist/powertip-direktive.js",
+    "dist/powertip-direktive.css"
+  ],
+  "dependencies": {
+    "jquery.powertip-1.2.0": "https://stevenbenner.github.io/jquery-powertip/releases/jquery.powertip-1.2.0.zip",
+    "jquery-powertip": "~1.2.0",
+    "jquery": "~2.1.1"    
+  },
+  "devDependencies": {
+    "angular": "latest",
+    "angular-mocks": "latest"
+  }
+}
