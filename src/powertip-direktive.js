@@ -30,6 +30,8 @@ angular.module('tpl.powertip', []).directive('powertip', function powertip() {
       var options = {};
 
       if (!scope.config) {
+        options.smartPlacement = true;
+
         // config via attributes
         if (scope.placement) {
           options.placement = scope.placement;
