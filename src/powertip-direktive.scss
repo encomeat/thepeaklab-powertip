@@ -31,8 +31,15 @@
   &.n:before, &.ne:before, &.nw:before, &.ne-alt:before, &.nw-alt:before {
     border-top: 10px solid #0d3d8a;
   }
-  &.s:before, &.se:before, &.sw:before, &.se-alt:before, &.sw-alt:before {
-    border-bottom: 10px solid #0d3d8a;
+  &.s, &.se, &.sw, &.se-alt, &.sw-alt {
+
+    border-bottom: none;
+    border-top: 4px solid #0d3d8a;
+
+    &:before {
+      border-bottom: 10px solid #0d3d8a;
+      top: -70%;
+    }
   }
   &.n:before, &.s:before {
     left: 50%;

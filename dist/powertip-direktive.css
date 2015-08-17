@@ -32,8 +32,13 @@
 .powertip.n:before, .powertip.ne:before, .powertip.nw:before, .powertip.ne-alt:before, .powertip.nw-alt:before {
   border-top: 10px solid #0d3d8a;
 }
+.powertip.s, .powertip.se, .powertip.sw, .powertip.se-alt, .powertip.sw-alt {
+  border-bottom: none;
+  border-top: 4px solid #0d3d8a;
+}
 .powertip.s:before, .powertip.se:before, .powertip.sw:before, .powertip.se-alt:before, .powertip.sw-alt:before {
   border-bottom: 10px solid #0d3d8a;
+  top: -70%;
 }
 .powertip.n:before, .powertip.s:before {
   left: 50%;
