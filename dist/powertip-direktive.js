@@ -59,10 +59,18 @@ angular.module('tpl.powertip', []).directive('powertip', [
               elem.remove();
             });
             scope.color = newVal;
-            styleElems.push($compile('<style>' + '.powertip' + '{  border-bottom: 4px solid ' + newVal + ';}</style>')(scope));
-            styleElems.push($compile('<style>' + '.powertip.n:before, .powertip.ne:before, .powertip.nw:before, ' + '.powertip.ne-alt:before, .powertip.nw-alt:before' + '{border-top: 10px solid' + newVal + ';}</style>')(scope));
-            styleElems.push($compile('<style>' + '.powertip.s, .powertip.se, .powertip.sw, .powertip.se-alt, .powertip.sw-alt' + '{border-top: 4px solid' + newVal + ';}</style>')(scope));
-            styleElems.push($compile('<style>' + '.powertip.s:before, .powertip.se:before, .powertip.sw:before, ' + '.powertip.se-alt:before, .powertip.sw-alt:before' + '{border-bottom: 10px solid ' + newVal + ';}</style>')(scope));
+            if ($document('#powertip-style-1')) {
+              styleElems.push($compile('<style id="powertip-style-1">' + '.powertip' + '{  border-bottom: 4px solid ' + newVal + ';}</style>')(scope));
+            }
+            if ($document('#powertip-style-2')) {
+              styleElems.push($compile('<style id="powertip-style-2">' + '.powertip.n:before, .powertip.ne:before, .powertip.nw:before, ' + '.powertip.ne-alt:before, .powertip.nw-alt:before' + '{border-top: 10px solid' + newVal + ';}</style>')(scope));
+            }
+            if ($document('#powertip-style-3')) {
+              styleElems.push($compile('<style id="powertip-style-3">' + '.powertip.s, .powertip.se, .powertip.sw, .powertip.se-alt, .powertip.sw-alt' + '{border-top: 4px solid' + newVal + ';}</style>')(scope));
+            }
+            if ($document('#powertip-style-4')) {
+              styleElems.push($compile('<style id="powertip-style-4">' + '.powertip.s:before, .powertip.se:before, .powertip.sw:before, ' + '.powertip.se-alt:before, .powertip.sw-alt:before' + '{border-bottom: 10px solid ' + newVal + ';}</style>')(scope));
+            }
             angular.forEach(styleElems, function (elem) {
               $document.find('head').append(elem);
             });
