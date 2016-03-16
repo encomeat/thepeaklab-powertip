@@ -78,26 +78,26 @@ angular.module('tpl.powertip', []).directive('powertip', [
 
             scope.color = newVal;
 
-            if ($document('#powertip-style-1')) {
+            if (!angular.element($document[0].querySelector('#powertip-style-1')).length) {
               styleElems.push($compile('<style id="powertip-style-1">' +
                 '.powertip' +
                 '{  border-bottom: 4px solid ' + newVal + ';}</style>')(scope));
             }
 
-            if ($document('#powertip-style-2')) {
+            if (!angular.element($document[0].querySelector('#powertip-style-2')).length) {
               styleElems.push($compile('<style id="powertip-style-2">' +
                 '.powertip.n:before, .powertip.ne:before, .powertip.nw:before, ' +
                 '.powertip.ne-alt:before, .powertip.nw-alt:before' +
                 '{border-top: 10px solid' + newVal + ';}</style>')(scope));
             }
 
-            if ($document('#powertip-style-3')) {
+            if (!angular.element($document[0].querySelector('#powertip-style-3')).length) {
               styleElems.push($compile('<style id="powertip-style-3">' +
                 '.powertip.s, .powertip.se, .powertip.sw, .powertip.se-alt, .powertip.sw-alt' +
                 '{border-top: 4px solid' + newVal + ';}</style>')(scope));
             }
 
-            if ($document('#powertip-style-4')) {
+            if (!angular.element($document[0].querySelector('#powertip-style-4')).length) {
               styleElems.push($compile('<style id="powertip-style-4">' +
                 '.powertip.s:before, .powertip.se:before, .powertip.sw:before, ' +
                 '.powertip.se-alt:before, .powertip.sw-alt:before' +
